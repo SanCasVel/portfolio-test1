@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TBOI Wiki Cheat Sheet</title>
+    <link rel="icon" type="image/png" href="img/icon/image.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-top">
+                <div class="logo">
+                    <h1>TBOI Wiki Cheat Sheet</h1>
+                </div>
+                <nav class="header-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="https://store.steampowered.com/app/113200/The_Binding_of_Isaac" target="_blank" class="nav-link">Download the game</a>     
+                </nav>
+            </div>
+        </header>
+
+        <div class="main-grid">
+            <aside class="sidebar">
+                <nav class="sidebar-nav">
+                    <div class="nav-section">
+                        <h3>Original</h3>
+                        <ul>
+                            <li><a href="#items">Items</a></li>
+                            <li><a href="#info">Info</a></li>
+                            <li><a href="#seeds">Seeds</a></li>
+                            <li><a href="#babies">Babies</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-section">
+                        <h3>Rebirth</h3>
+                        <ul>
+                            <li><a href="#items">Items</a></li>
+                            <li><a href="#info">Info</a></li>
+                            <li><a href="#seeds">Seeds</a></li>
+                            <li><a href="#babies">Babies</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-section">
+                        <h3>Afterbirth</h3>
+                        <ul>
+                            <li><a href="#items">Items</a></li>
+                            <li><a href="#info">Info</a></li>
+                            <li><a href="#seeds">Seeds</a></li>
+                            <li><a href="#babies">Babies</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-section">
+                        <h3>Afterbirth+</h3>
+                        <ul>
+                            <li><a href="#items">Items</a></li>
+                            <li><a href="#info">Info</a></li>
+                            <li><a href="#seeds">Seeds</a></li>
+                            <li><a href="#babies">Babies</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-section">
+                        <h3>Antibirth</h3>
+                        <ul>
+                            <li><a href="#items">Items</a></li>
+                            <li><a href="#info">Info</a></li>
+                            <li><a href="#seeds">Seeds</a></li>
+                            <li><a href="#babies">Babies</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-section">
+                        <h3>Repentance</h3>
+                        <ul>
+                            <li><a href="#items">Items</a></li>
+                            <li><a href="#info">Info</a></li>
+                            <li><a href="#seeds">Seeds</a></li>
+                            <li><a href="#babies">Babies</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-section">
+                        <h3>Mechanics</h3>
+                        <ul>
+                            <li><a href="#devil">Devil Room</a></li>
+                            <li><a href="#angel">Angel Room</a></li>
+                            <li><a href="#transform">Transformations</a></li>
+                            <li><a href="#sacrifice">Sacrifice Rooms</a></li>
+                            <li><a href="#tarot">Tarot Cloth</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </aside>
+
+            <main class="content">
+                <div class="content-header">
+                    <h2>Repentance Items</h2>
+                    <div class="controls">
+                        <div class="control-group">
+                            <label for="sort">Sort:</label>
+                            <select id="sort">
+                                <option>Item ID</option>
+                                <option>Name</option>
+                                <option>Quality</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label for="filter">Filter:</label>
+                            <select id="filter">
+                                <option>All Items</option>
+                                <option>Active Items</option>
+                                <option>Passive Items</option>
+                            </select>
+                        </div>
+                        <div class="control-group" id="query">
+                            <label for="size">Size:</label>
+                           <select id="size">
+                             <option value="Default">Default</option>
+                             <option value="Smaller">Smaller</option>
+                             <option value="Larger">Larger</option>
+                           </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="items-grid" id="itemsGrid">
+                    <div class="item-card">
+                        <div class="item-info">
+                            <h4>Clear Rune</h4>
+                            <p class="item-id">ID: 263</p>
+                            <p class="item-quality">Quality: 2</p>
+                            <p class="item-type">Type: Active</p>
+                            <p class="item-description">Rune mimic - copies the effect of the Rune or Soul stone you are holding</p>
+                            <p class="item-pool">Pool: Secret Room</p>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-info">
+                            <h4>Mucormycosis</h4>
+                            <p class="item-id">ID: 553</p>
+                            <p class="item-quality">Quality: 3</p>
+                            <p class="item-type">Type: Passive</p>
+                            <p class="item-description">Spore shot - Tears have a chance to fire fungus tears that stick to enemies</p>
+                            <p class="item-pool">Pool: Item Room</p>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-info">
+                            <h4>2Spooky</h4>
+                            <p class="item-id">ID: 554</p>
+                            <p class="item-quality">Quality: 1</p>
+                            <p class="item-type">Type: Passive</p>
+                            <p class="item-description">4me - Enemies within close range become feared and flee</p>
+                            <p class="item-pool">Pool: Devil Room</p>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-info">
+                            <h4>Golden Razor</h4>
+                            <p class="item-id">ID: 555</p>
+                            <p class="item-quality">Quality: 1</p>
+                            <p class="item-type">Type: Active</p>
+                            <p class="item-description">Pain from gain - Takes coins and grants damage ups</p>
+                            <p class="item-pool">Pool: Item Room</p>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-info">
+                            <h4>Sulfur</h4>
+                            <p class="item-id">ID: 556</p>
+                            <p class="item-quality">Quality: 2</p>
+                            <p class="item-type">Type: Active</p>
+                            <p class="item-description">Temporary demon form - Grants Brimstone for current room</p>
+                            <p class="item-pool">Pool: Devil Room</p>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-info">
+                            <h4>Fortune Cookie</h4>
+                            <p class="item-id">ID: 557</p>
+                            <p class="item-quality">Quality: 2</p>
+                            <p class="item-type">Type: Active</p>
+                            <p class="item-description">Reusable fortunes - Displays random fortune and drops rewards</p>
+                            <p class="item-pool">Pool: Item Room</p>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-info">
+                            <h4>Eye Sore</h4>
+                            <p class="item-id">ID: 558</p>
+                            <p class="item-quality">Quality: 1</p>
+                            <p class="item-type">Type: Passive</p>
+                            <p class="item-description">More eyes - Chance to fire extra tears in random directions</p>
+                            <p class="item-pool">Pool: Item Room</p>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-info">
+                            <h4>120 Volt</h4>
+                            <p class="item-id">ID: 559</p>
+                            <p class="item-quality">Quality: 2</p>
+                            <p class="item-type">Type: Passive</p>
+                            <p class="item-description">Zap! - Fires electricity at nearby enemies with chain effect</p>
+                            <p class="item-pool">Pool: Item Room</p>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-info">
+                            <h4>It Hurts</h4>
+                            <p class="item-id">ID: 560</p>
+                            <p class="item-quality">Quality: 1</p>
+                            <p class="item-type">Type: Passive</p>
+                            <p class="item-description">No it doesn't - Taking damage fires tears and grants tears up</p>
+                            <p class="item-pool">Pool: Item Room</p>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-info">
+                            <h4>Almond Milk</h4>
+                            <p class="item-id">ID: 561</p>
+                            <p class="item-quality">Quality: 1</p>
+                            <p class="item-type">Type: Passive</p>
+                            <p class="item-description">DMG down + tears up - Tears gain random worm effects</p>
+                            <p class="item-pool">Pool: Item Room</p>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-info">
+                            <h4>Rock Bottom</h4>
+                            <p class="item-id">ID: 562</p>
+                            <p class="item-quality">Quality: 3</p>
+                            <p class="item-type">Type: Passive</p>
+                            <p class="item-description">It's only up from there - Prevents stat reductions for rest of run</p>
+                            <p class="item-pool">Pool: Secret Room</p>
+                        </div>
+                    </div>
+
+                    <div class="item-card"> 
+                        <div class="item-info">
+                            <h4>Nancy Bombs</h4>
+                            <p class="item-id">ID: 563</p>
+                            <p class="item-quality">Quality: 2</p>
+                            <p class="item-type">Type: Passive</p>
+                            <p class="item-description">Random blast - Bombs explode with random effects</p>
+                            <p class="item-pool">Pool: Item Room</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

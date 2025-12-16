@@ -1,0 +1,155 @@
+/*COLOUR PALETTE: #F4F4C1; #66023C; #CAD183*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    font-size: x-large;
+    background-color: #F4F4C1;
+}
+
+header {
+    background: #66023C;
+    color: #CAD183;
+    padding: 20px 0;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+a {
+    text-decoration: none; 
+}
+
+.card {
+    background: #CAD183;
+    align-content: center;
+    text-align: left;
+    color: #66023C ;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 40px;
+    padding: 15px;
+    transition: transform 0.1s;
+}
+
+.card p:first-letter {
+    font-size: 200%;
+    font-weight: bold;
+    float: left;
+}
+
+@font-face {
+    font-family: 'Verdana, Geneva, Tahoma, sans-serif';
+    src: url('../fonts/Cinzel,Italianno,Licorice,Major_Mono_Display,Michroma,etc/Cinzel');
+    src: url('../fonts/Cinzel,Italianno,Licorice,Major_Mono_Display,Michroma,etc/Italianno');
+    src: url('../fonts/Cinzel,Italianno,Licorice,Major_Mono_Display,Michroma,etc/Licorice');
+    src: url('../fonts/Cinzel,Italianno,Licorice,Major_Mono_Display,Michroma,etc/Major_Mono_Display');
+    src: url('../fonts/Cinzel,Italianno,Licorice,Major_Mono_Display,Michroma,etc/Michroma');
+    src: url('../fonts/Cinzel,Italianno,Licorice,Major_Mono_Display,Michroma,etc/Neuton');
+    src: url('../fonts/Cinzel,Italianno,Licorice,Major_Mono_Display,Michroma,etc/Pacifico');
+    src: url('../fonts/Cinzel,Italianno,Licorice,Major_Mono_Display,Michroma,etc/Raleway');
+    src: url('../fonts/Cinzel,Italianno,Licorice,Major_Mono_Display,Michroma,etc/Trade_Winds');
+    src: url('../fonts/Cinzel,Italianno,Licorice,Major_Mono_Display,Michroma,etc/Shadows_Into_Light');
+    src: url('../fonts/Cinzel,Italianno,Licorice,Major_Mono_Display,Michroma,etc/Reenie_Beanie');
+} 
+
+#c1 {
+    font-family: 'Cinzel';
+    background-image: url('../img/franklinEYES.png');
+    background-size: cover;
+    color: #F4F4C1;
+}
+
+#c2 {
+    font-family: 'shadows into light';
+    background-image: url('../img/johnlennonEYES.png');
+    background-size: cover;
+    color: #F4F4C1;
+}
+
+#c3 {
+    font-family: 'Reenie Beanie';
+    background-image: url('../img/dalailamaEYES.png');
+    background-size: cover;
+    color: #F4F4C1;
+}
+
+#c4 {
+    font-family: 'Major Mono Display';
+    background-image: url('../img/stephenkingEYES.png');
+    background-size: cover;
+    color: #F4F4C1;
+}
+
+#c5 {
+    font-family: 'Michroma';
+    background-image: url('../img/briantracyEYES.png');
+    background-size: cover;
+    color: #F4F4C1;
+}
+
+#c6 {
+    font-family: 'Neuton';
+    background-image: url('../img/theodoreroseveltEYES.png');
+    background-size: cover;
+    color: #F4F4C1;
+}
+
+#c7 {
+    font-family: 'Pacifico';
+    background-image: url('../img/stevejobsEYES.png');
+    background-size: cover;
+    color: #F4F4C1;
+}
+
+#c8 {
+    font-family: 'Raleway';
+    background-image: url('../img/waynegretzkyEYES.png');
+    background-size: cover;
+    color: #F4F4C1;
+}
+
+#c9 {
+    font-family: 'Tradewind';
+    background-image: url('../img/roybennetEYES.png');
+    background-size: cover;
+    color: #F4F4C1;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    gap: 15px;
+    background-color: #66023C;
+    border-radius: 20px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60px; 
+    background: #66023C;
+    color: #CAD183;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 -4px 10px rgba(133, 10, 126, 0.60);
+    z-index: 100;
+}
+
+.card-container {
+    overflow: hidden;
+}

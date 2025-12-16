@@ -1,0 +1,172 @@
+@font-face {
+    font-family: 'RalewayCustom';
+    src: url('../fonts/Raleway/Raleway-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root{
+    --header-h: 64px;
+}
+
+*{box-sizing: border-box}
+
+body {
+    font-family: 'RalewayCustom', "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color: #222;
+}
+
+.topbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-h);
+    background: #6f6f6f;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 28px;
+    z-index: 1000;
+}
+
+.topbar .menu{
+    display: flex;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+}
+
+.topbar .menu li{
+    font-size: 14px;
+    opacity: 0.95;
+    cursor: pointer;
+}
+
+.topbar .logo{
+    margin-left: 100px;
+    margin-right: 0;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+main{
+    min-height: calc(100vh - var(--header-h));
+    margin-top: var(--header-h);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.stage{
+    width: 100%;
+    display:flex;
+    justify-content:center;
+}
+
+.panel{
+    width: 920px;
+    max-width: calc(100% - 80px);
+    background: linear-gradient(180deg,     rgba(100, 100, 100, 0.7), rgba(0, 162, 92, 0.4));
+    padding: 34px;
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.card{
+    height: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 18px;
+    box-shadow: 0 14px 20px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.35);
+    position: relative;
+    transition: transform 0.1s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
+}
+
+.card .art{
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    right: 18px;
+    bottom: 46px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+    filter: grayscale(0.0) contrast(0.9);
+    opacity: 0.96;
+}
+
+.caption{
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(0,0,0,0.75);
+    padding-top: 6px;
+}
+
+#card1{ background: linear-gradient(180deg,#ffffff,#f4d092); }
+#card1 .art{ background-image: url('../img/fox.png'); opacity:0.9; filter: none; }
+
+#card2{ background: linear-gradient(180deg,#ffffff,#aeaeae); }
+#card2 .art{ background-image: url('../img/cat.png'); opacity:0.9; filter: none; }
+
+#card3{ background: linear-gradient(180deg,#ffffff,#fedcbe); }
+#card3 .art{ background-image: url('../img/rabbit.png'); opacity:0.9; filter: none; }
+
+#card4{ background: linear-gradient(180deg,#ffffff,#a3bfe0); }
+#card4 .art{ background-image: url('../img/hawk.png'); opacity:0.9; filter: none; }
+
+#card5{ background: linear-gradient(180deg,#ffffff,#d4d063); }
+#card5 .art{ background-image: url('../img/lion.png'); opacity:0.9; filter: none; }
+
+#card6{ background: linear-gradient(180deg,#ffffff,#e2b766); }
+#card6 .art{ background-image: url('../img/deer.png'); opacity:0.9; filter: none; }
+
+#animales { 
+    text-decoration: underline; 
+}
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 860px){
+    .cards{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px){
+    .cards{ grid-template-columns: 1fr; }
+    .panel{ padding: 20px }
+}

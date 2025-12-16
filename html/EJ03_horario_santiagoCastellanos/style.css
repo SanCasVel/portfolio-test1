@@ -1,0 +1,119 @@
+        body {
+            background: #f7f3ef;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #f7f3ef;
+            padding: 30px 40px;
+            border-radius: 20px;
+        }
+        
+        h1 {
+            background: #d9d9d9;
+            border-radius: 20px;
+            padding: 15px 0;
+            font-size: 2.2em;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            color: #6c6c6c;
+        }
+
+        .horario-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 12px;
+        }
+
+        .horario-table th {
+            background: #e7e2db;
+            color: #6c6c6c;
+            font-size: 1.1em;
+            padding: 10px 0;
+            border-radius: 15px;
+            font-weight: 600;
+        }
+        
+        .horario-table td {
+            min-width: 120px;
+            height: 70px;
+            vertical-align: middle;
+            border-radius: 18px;
+            font-size: 1em;
+            font-weight: 500;
+        }
+
+        .fundamentos {
+            background: #ffffff;
+            color: #000;
+        }
+
+        .interfaces {
+            background: #6c6c6c;
+            color: #fff;
+        }
+
+        .fol {
+            background: #ffbdbd;
+            color: #000;
+        }
+
+        .foto {
+            background: #ffbca2;
+            color: #000;
+        }
+
+        .ingles {
+            background: #fcff9e;
+            color: #000;
+        }
+
+        .programacion {
+            background: #d0ffaf;
+            color: #000;
+        }
+
+        .multimedia {
+            background: #82f8c1;
+            color: #000;
+        }
+
+        .medios {
+            background: #ffb9d0;
+            color: #000;
+        }
+
+        .proyectos {
+            background: #9ec0ff;
+            color: #000;
+        }
+
+        .tipografia {
+            background: #9b95ff;
+            color: #000;
+        }
+
+        .teoriaimagen {
+            background: #f4c1ff;
+            color: #000;
+        }
+
+        .patio {
+            background: #b4f8ff;
+            color: #534639;
+            font-size: 1.1em;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .time-col {
+            background: #e7e2db;
+            color: #6c6c6c;
+            font-weight: 600;
+            font-size: 1.1em;
+        }

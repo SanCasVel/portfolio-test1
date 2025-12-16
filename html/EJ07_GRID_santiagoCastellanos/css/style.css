@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
+.header {
+    grid-column: 1;
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    border-bottom: 2px solid #444;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    color: #ff6b6b;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.header-nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.header-nav .nav-link {
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.header-nav .nav-link:hover {
+    background-color: #ff6b6b;
+    color: #1a1a1a;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 0;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.sidebar {
+    grid-column: 1;
+    background-color: #242424;
+    border-right: 1px solid #444;
+    padding: 1.5rem 0;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.nav-section {
+    padding: 0 1rem;
+}
+
+.nav-section h3 {
+    color: #ff6b6b;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-section ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.nav-section a {
+    color: #a0a0a0;
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    display: block;
+}
+
+.nav-section a:hover {
+    background-color: #333;
+    color: #ff6b6b;
+    padding-left: 1.2rem;
+}
+
+.content {
+    grid-column: 2;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.content-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #444;
+}
+
+.content-header h2 {
+    color: #ff6b6b;
+    font-size: 1.5rem;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.control-group {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.control-group label {
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.control-group select {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.control-group select:hover,
+.control-group select:focus {
+    border-color: #ff6b6b;
+    outline: none;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--grid-min-size, 280px), 1fr));
+    gap: 1.5rem;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.item-card {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 1rem;
+    background-color: #2a2a2a;
+    border: 1px solid #404040;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.item-card:hover {
+    border-color: #ff6b6b;
+    background-color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.2);
+}
+
+.item-image-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.item-info {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.item-info h4 {
+    color: #ff6b6b;
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.item-id,
+.item-quality,
+.item-type,
+.item-pool {
+    font-size: 0.8rem;
+    color: #a0a0a0;
+}
+
+.item-quality {
+    color: #ffc107;
+}
+
+.item-description {
+    font-size: 0.85rem;
+    color: #c0c0c0;
+    margin-top: 0.3rem;
+    line-height: 1.4;
+}
+
+.item-pool {
+    color: #90EE90;
+    margin-top: 0.3rem;
+}
+
+@media (max-width: 1200px) {
+    .items-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .controls {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    #query { 
+        display: none;
+    }
+
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        max-height: auto;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-right: none;
+        border-bottom: 1px solid #444;
+    }
+    
+    .sidebar-nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .content-header {
+        grid-template-columns: 1fr;
+    }
+    
+    .controls {
+        grid-template-columns: 1fr;
+    }
+    
+    .items-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .item-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .image-placeholder {
+        width: 100%;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-top {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .header-nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .sidebar-nav {
+        grid-template-columns: 1fr;
+    }
+    
+    .items-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .content {
+        padding: 1rem;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #505050;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff6b6b;
+}
