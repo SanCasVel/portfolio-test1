@@ -6,13 +6,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     squares.forEach((square, index) => {
         square.addEventListener('mouseenter', function() {
-            this.style.animation = `pulse 0.6s ease-in-out`;
+            this.style.animation = `pulse 0.5s ease-in-out`;
         });
     });
     
     japaneseText.forEach((text) => {
         text.addEventListener('mouseenter', function() {
-            this.style.animation = `wave 0.6s ease-in-out`;
+            this.style.animation = `wave 0.5s ease-in-out`;
         });
     });
     
