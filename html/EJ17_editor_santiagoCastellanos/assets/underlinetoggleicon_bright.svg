@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Bold" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 512 512">
+  <!-- Generator: Adobe Illustrator 30.2.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path class="st0" d="M256,405.1c105.99-.12,191.88-86.01,192-192V32C448,14.33,433.67,0,416,0s-32,14.33-32,32v181.1c0,70.69-57.31,128-128,128s-128-57.31-128-128V32C128,14.33,113.67,0,96,0s-32,14.33-32,32v181.1c.12,105.99,86.01,191.88,192,192Z"/>
+  <path class="st0" d="M480.94,448H32c-17.67,0-32,14.33-32,32s14.33,32,32,32h448.94c17.67,0,32-14.33,32-32s-14.33-32-32-32Z"/>
+</svg>

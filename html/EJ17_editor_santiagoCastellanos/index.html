@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Texto Plano</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- ---------- Barra de menú ---------- -->
+        <div class="menu-container">
+            <div class="menu-bar">
+                <button class="menu-item" id="fileMenu">Archivo</button>
+                <button class="menu-item" id="editMenu">Editar</button>
+                <button class="menu-item" id="viewMenu">Ver</button>
+                <button class="menu-item" id="formatMenu">Formato</button>
+                <button class="menu-item theme-toggle" id="themeToggleMenu" title="Alternar tema" aria-label="Alternar tema">
+                    <img src="assets/themetoggleicon_bright.svg" data-icon-light="assets/themetoggleicon_bright.svg" data-icon-dark="assets/themetoggleicon_dark.svg" alt="Tema" class="tool-icon">
+                </button>
+            </div>
+
+            <!-- Dropdown Menus --> 
+            <div class="dropdown-menu" id="fileDropdown" hidden>
+                <button class="dropdown-item" id="openBtn">Abrir (Ctrl+O)</button>
+                <button class="dropdown-item" id="openNativeBtn">Abrir (Nativo)</button>
+                <button class="dropdown-item" id="saveBtn">Guardar (Ctrl+S)</button>
+                <button class="dropdown-item" id="saveNativeBtn">Guardar (Nativo)</button>
+                <button class="dropdown-item" id="saveAsBtn">Guardar Como...</button>
+                <hr>
+                <button class="dropdown-item" id="newBtn">Nuevo</button>
+            </div>
+
+            <div class="dropdown-menu" id="editDropdown" hidden>
+                <button class="dropdown-item" id="copyBtn">Copiar (Ctrl+C)</button>
+                <button class="dropdown-item" id="pasteBtn">Pegar (Ctrl+V)</button>
+                <button class="dropdown-item" id="cutBtn">Cortar (Ctrl+X)</button>
+                <hr>
+                <button class="dropdown-item" id="selectAllBtn">Seleccionar Todo (Ctrl+A)</button>
+            </div>
+
+            <div class="dropdown-menu" id="viewDropdown" hidden>
+                <button class="dropdown-item" id="wordWrapBtn">Ajuste de Líneas</button>
+                <button class="dropdown-item" id="statusBarToggleBtn">Barra de Estado</button>
+            </div>
+
+            <div class="dropdown-menu" id="formatDropdown" hidden>
+                <label class="dropdown-item">
+                    Tipografía: 
+                    <select id="fontSelect">
+                        <option value="'Segoe UI', sans-serif">Segoe UI</option>
+                        <option value="'Arial', sans-serif">Arial</option>
+                        <option value="'Courier New', monospace">Courier New</option>
+                        <option value="'Georgia', serif">Georgia</option>
+                        <option value="'Consolas', monospace">Consolas</option>
+                        <option value="'Times New Roman', serif">Times New Roman</option>
+                    </select>
+                </label>
+                <label class="dropdown-item">
+                    Tamaño: 
+                    <select id="fontSizeSelect">
+                        <option value="12">12px</option>
+                        <option value="14">14px</option>
+                        <option value="16">16px</option>
+                        <option value="18">18px</option>
+                        <option value="20">20px</option>
+                        <option value="24">24px</option>
+                        <option value="30">30px</option>
+                        <option value="36">36px</option>
+                        <option value="42">42px</option>
+                        <option value="64">64px</option>
+                        <option value="72">72px</option>
+                    </select>
+                </label>
+                <label class="dropdown-item">
+                    Color: 
+                    <input type="color" id="textColorInput" value="#000000">
+                </label>
+            </div>
+        </div>
+
+        <!-- ---------- Barra de herramientas ---------- -->
+        <div class="toolbar">
+            <button class="tool-btn" id="newFileTool" title="Nuevo (Ctrl+N)" aria-label="Nuevo">
+                <img src="assets/newfileicon_bright.svg" data-icon-light="assets/newfileicon_bright.svg" data-icon-dark="assets/newfileicon_dark.svg" alt="Nuevo" class="tool-icon">
+            </button>
+            <button class="tool-btn" id="openFileTool" title="Abrir (Ctrl+O)" aria-label="Abrir">
+                <img src="assets/openfileicon_bright.svg" data-icon-light="assets/openfileicon_bright.svg" data-icon-dark="assets/openfileicon_dark.svg" alt="Abrir" class="tool-icon">
+            </button>
+            <button class="tool-btn" id="saveFileTool" title="Guardar (Ctrl+S)" aria-label="Guardar">
+                <img src="assets/savefileicon_bright.svg" data-icon-light="assets/savefileicon_bright.svg" data-icon-dark="assets/savefileicon_dark.svg" alt="Guardar" class="tool-icon">
+            </button>
+            <div class="toolbar-separator"></div>
+            <button class="tool-btn" id="copyTool" title="Copiar (Ctrl+C)" aria-label="Copiar">
+                <img src="assets/copytoolicon_bright.svg" data-icon-light="assets/copytoolicon_bright.svg" data-icon-dark="assets/copytoolicon_dark.svg" alt="Copiar" class="tool-icon">
+            </button>
+            <button class="tool-btn" id="pasteTool" title="Pegar (Ctrl+V)" aria-label="Pegar">
+                <img src="assets/pastetoolicon_bright.svg" data-icon-light="assets/pastetoolicon_bright.svg" data-icon-dark="assets/pastetoolicon_dark.svg" alt="Pegar" class="tool-icon">
+            </button>
+            <button class="tool-btn" id="cutTool" title="Cortar (Ctrl+X)" aria-label="Cortar">
+                <img src="assets/cuttoolicon_bright.svg" data-icon-light="assets/cuttoolicon_bright.svg" data-icon-dark="assets/cuttoolicon_dark.svg" alt="Cortar" class="tool-icon">
+            </button>
+            <div class="toolbar-separator"></div>
+            <button class="tool-btn" id="boldTool" title="Negrita (Ctrl+B)" aria-label="Negrita">
+                <img src="assets/boldtoggleicon_bright.svg" data-icon-light="assets/boldtoggleicon_bright.svg" data-icon-dark="assets/boldtoggleicon_dark.svg" alt="Negrita" class="tool-icon">
+            </button>
+            <button class="tool-btn" id="italicTool" title="Cursiva (Ctrl+I)" aria-label="Cursiva">
+                <img src="assets/italicatoggleicon_bright.svg" data-icon-light="assets/italicatoggleicon_bright.svg" data-icon-dark="assets/italicatoggleicon_dark.svg" alt="Cursiva" class="tool-icon">
+            </button>
+            <button class="tool-btn" id="underlineTool" title="Subrayado (Ctrl+U)" aria-label="Subrayado">
+                <img src="assets/underlinetoggleicon_bright.svg" data-icon-light="assets/underlinetoggleicon_bright.svg" data-icon-dark="assets/underlinetoggleicon_dark.svg" alt="Subrayado" class="tool-icon">
+            </button>
+            <button class="tool-btn" id="highlightTool" title="Resaltar" aria-label="Resaltar">
+                <img src="assets/highlighttexttoggleicon_bright.svg" data-icon-light="assets/highlighttexttoggleicon_bright.svg" data-icon-dark="assets/highlighttexttoggleicon_dark.svg" alt="Resaltar" class="tool-icon">
+            </button>
+            <div class="toolbar-separator"></div>
+            <button class="tool-btn" id="alignLeftTool" title="Alinear a la izquierda" aria-label="Alinear a la izquierda">
+                <img src="assets/alignlefticon_bright.svg" data-icon-light="assets/alignlefticon_bright.svg" data-icon-dark="assets/alignlefticon_dark.svg" alt="Alinear izquierda" class="tool-icon">
+            </button>
+            <button class="tool-btn" id="alignCenterTool" title="Centrar" aria-label="Centrar">
+                <img src="assets/aligncentericon_bright.svg" data-icon-light="assets/aligncentericon_bright.svg" data-icon-dark="assets/aligncentericon_dark.svg" alt="Centrar" class="tool-icon">
+            </button>
+            <button class="tool-btn" id="alignRightTool" title="Alinear a la derecha" aria-label="Alinear a la derecha">
+                <img src="assets/alignrighticon_bright.svg" data-icon-light="assets/alignrighticon_bright.svg" data-icon-dark="assets/alignrighticon_dark.svg" alt="Alinear derecha" class="tool-icon">
+            </button>
+            <button class="tool-btn" id="alignJustifyTool" title="Justificar" aria-label="Justificar">
+                <img src="assets/alignjustifyicon_bright.svg" data-icon-light="assets/alignjustifyicon_bright.svg" data-icon-dark="assets/alignjustifyicon_dark.svg" alt="Justificar" class="tool-icon">
+            </button>
+            <button class="tool-btn" id="listToggleTool" title="Lista (alternar)" aria-label="Lista">
+                <img src="assets/listtoggleicon_bright.svg" data-icon-light="assets/listtoggleicon_bright.svg" data-icon-dark="assets/listtoggleicon_dark.svg" alt="Lista" class="tool-icon">
+            </button>
+            <div class="toolbar-separator"></div>
+            <button class="tool-btn" id="undoTool" title="Deshacer (Ctrl+Z)" aria-label="Deshacer">
+                <img src="assets/undotoolicon_dark.svg" data-icon-light="assets/undotoolicon_bright.svg" data-icon-dark="assets/undotoolicon_dark.svg" alt="Deshacer" class="tool-icon">
+            </button>
+            <button class="tool-btn" id="redoTool" title="Rehacer (Ctrl+Y / Ctrl+Shift+Z)" aria-label="Rehacer">
+                <img src="assets/redotoolicon_bright.svg" data-icon-light="assets/redotoolicon_bright.svg" data-icon-dark="assets/redotoolicon_dark.svg" alt="Rehacer" class="tool-icon">
+            </button>
+            <div class="toolbar-separator"></div>
+            <button class="tool-btn" id="orientationToggle" title="Cambiar Orientación (Portrait/Landscape)" aria-label="Cambiar Orientación">
+                <img src="assets/orientationtoggleicon_bright.svg" data-icon-light="assets/orientationtoggleicon_bright.svg" data-icon-dark="assets/orientationtoggleicon_dark.svg" alt="Orientación" class="tool-icon">
+            </button>
+            <input type="file" id="fileInput" accept=".txt, .text, .log, .md, .csv, .html, .css, .js, .json, .xml" hidden>  
+        </div>
+
+        <!-- ---------- Área principal del editor ---------- -->
+        <div class="editor-wrapper" id="editorWrapper">
+            <div class="editor-container" id="editorContainer">
+                <div 
+                    id="editor" 
+                    class="editor" 
+                    contenteditable="true" 
+                    spellcheck="false"
+                    data-placeholder="Arrastra un archivo aquí o utiliza Archivo > Abrir para comenzar..."
+                ></div>
+            </div>
+        </div>
+
+        <!-- ---------- Barra de estado ---------- -->
+        <div class="status-bar" id="statusBar">
+            <div class="status-item">
+                Archivo: <span id="fileName">Sin título</span>
+                <span class="unsaved-indicator" id="unsavedIndicator" hidden>●</span>
+            </div>
+            <div class="status-item">
+                Líneas: <span id="lineCount">1</span> | 
+                Caracteres: <span id="charCount">0</span>
+            </div>
+            <div class="status-item">
+                Posición: <span id="position">1:1</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden input for native file picking -->
+    <input type="file" id="nativeFileInput" accept=".txt, .text, .log, .md, .csv, .html, .css, .js, .json, .xml" hidden>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
